@@ -5,7 +5,7 @@ clear all
 
 %% parameters for (repulsive) lennard-jones potential of particles, walls
 sigma_pot = 0.5;
-e = 10e-4;
+e = 10^-3;
 
 %% parameters for execution
 
@@ -118,7 +118,7 @@ for ii = 1:niter
             end
 
             % calculate new position for particle pp
-            dx = ((u_new(pp)*v_c(pp) + F/gamma))*dt;
+            dx = ((u_new(pp)*v(pp) + F/gamma))*dt;
             % dx = flag_switch_2(pp,npart,wall,x,x_new,dx);
             x_new(pp) = x(pp) + dx;
 
@@ -140,11 +140,10 @@ for ii = 1:niter
         x_check(pp) = x_new(pp);
         
         %% artefacts
-        %v_check(pp) = v_c(pp);
+        %v_check(pp) = v(pp);
         %u_check(pp) = u_new(pp);
 
         %x(pp) = x_new(pp);
-        %v(pp) = v_c(pp);
         %u(pp) = u_new(pp);
         %%
 
