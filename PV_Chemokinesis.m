@@ -70,7 +70,7 @@ v_c = zeros(1,npart);
 c0 = 15; % critical oxygen concentration %good value: c0 = 15
 c_plat = 20; % critical plateau concentration.
 % pinned to high number (no plateau)
-v0 = 1.5*c0; % limiting concentration
+v0 = 1.5*c0; % limiting velocity
 x0 = wall/2; % position of critical oxygen concentration
 %good value: x0 = wall or x0 = wall/2
 %%
